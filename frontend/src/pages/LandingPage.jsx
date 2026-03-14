@@ -31,7 +31,7 @@ const LandingPage = () => (
           "Reaction time and variance monitoring",
           "Working memory and recall testing",
           "Reading and Stroop interference analysis",
-          "Admin analytics and dataset export"
+          "Task Switching & Cognitive Flexibility"
         ].map((item) => (
           <div key={item} className="panel-soft p-5 text-slate-700">
             {item}
