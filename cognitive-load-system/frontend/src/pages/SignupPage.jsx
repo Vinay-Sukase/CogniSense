@@ -61,7 +61,7 @@ const SignupPage = () => {
           {[
             "Clear instructions before every test",
             "Visual dashboards for score and trends",
-            "Private session history with delete controls",
+            "Private session history for returning users",
             "Actionable focus and fatigue suggestions"
           ].map((item) => (
             <div key={item} className="panel-soft p-4 text-slate-700">

@@ -8,11 +8,7 @@
 
 body {
   @apply font-body text-slate-900;
-  background-image:
-    radial-gradient(circle at 10% 10%, rgba(191, 219, 254, 0.7), transparent 22%),
-    radial-gradient(circle at 90% 0%, rgba(209, 250, 229, 0.8), transparent 26%),
-    radial-gradient(circle at 50% 100%, rgba(253, 230, 138, 0.45), transparent 28%),
-    linear-gradient(180deg, #f7f8fb 0%, #edf2f7 45%, #e5ebf3 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
   min-height: 100vh;
   line-height: 1.55;
 }
@@ -22,11 +18,11 @@ body {
 }
 
 .panel {
-  @apply rounded-[24px] border border-white/50 bg-white/65 backdrop-blur-2xl shadow-panel md:rounded-[28px];
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm md:rounded-3xl;
 }
 
 .panel-soft {
-  @apply rounded-[24px] border border-white/50 bg-white/55 backdrop-blur-xl md:rounded-[28px];
+  @apply rounded-2xl border border-slate-200 bg-slate-50 md:rounded-3xl;
 }
 
 .page-shell {
@@ -38,15 +34,15 @@ body {
 }
 
 .input-control {
-  @apply w-full rounded-2xl border border-slate-200 bg-white/80 px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-200;
+  @apply w-full rounded-2xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100;
 }
 
 .button-primary {
-  @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:from-sky-400 hover:to-blue-500 disabled:opacity-50 md:px-6 md:text-base;
+  @apply inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:opacity-50 md:px-6 md:text-base;
 }
 
 .button-secondary {
-  @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/75 px-4 py-3 text-sm text-slate-800 transition hover:bg-white md:px-5 md:text-base;
+  @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-4 py-3 text-sm text-slate-800 transition hover:bg-slate-50 md:px-5 md:text-base;
 }
 
 .section-title {
@@ -62,7 +58,7 @@ body {
 }
 
 .glass-chip {
-  @apply inline-flex rounded-full border border-white/60 bg-white/70 px-4 py-2 text-sm text-slate-700;
+  @apply inline-flex rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700;
 }
 
 .responsive-data-table {

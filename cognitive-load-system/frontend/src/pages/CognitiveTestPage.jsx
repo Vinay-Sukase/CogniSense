@@ -125,7 +125,7 @@ const CognitiveTestPage = () => {
       <section className="panel p-6 sm:p-8 md:p-10">
         <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
           <div>
-            <div className="glass-chip">Apple-style guided assessment</div>
+            <div className="glass-chip">Guided assessment</div>
             <h1 className="section-title mt-5">Cognitive Assessment</h1>
             <p className="mt-4 max-w-3xl muted-copy">
               Each test is introduced before it begins. Read the purpose, understand what is being
@@ -227,11 +227,11 @@ const CognitiveTestPage = () => {
               <h2 className="mt-4 text-3xl font-semibold text-slate-900">{currentTest.title}</h2>
               <p className="mt-4 muted-copy">{currentTest.summary}</p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[22px] border border-white/60 bg-white/70 p-4">
+                <div className="rounded-[22px] border border-slate-200 bg-slate-50 p-4">
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Expected time</p>
                   <p className="mt-2 font-semibold text-slate-900">{currentTest.duration}</p>
                 </div>
-                <div className="rounded-[22px] border border-white/60 bg-white/70 p-4">
+                <div className="rounded-[22px] border border-slate-200 bg-slate-50 p-4">
                   <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Measures</p>
                   <p className="mt-2 font-semibold text-slate-900">{currentTest.outcome}</p>
                 </div>
@@ -240,7 +240,7 @@ const CognitiveTestPage = () => {
                 <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Instructions</p>
                 <ol className="mt-4 space-y-3 text-sm muted-copy">
                   {currentTest.instructions.map((item, index) => (
-                    <li key={item} className="flex gap-3 rounded-2xl bg-white/70 px-4 py-3">
+                    <li key={item} className="flex gap-3 rounded-2xl bg-slate-50 px-4 py-3">
                       <span className="font-semibold text-slate-900">{index + 1}.</span>
                       <span>{item}</span>
                     </li>
@@ -277,7 +277,7 @@ const CognitiveTestPage = () => {
               {stage === "running" && <currentTest.Component onComplete={completeStep} />}
               {stage === "completed" && (
                 <div className="space-y-6">
-                  <div className="rounded-[24px] border border-white/60 bg-white/70 p-5">
+                  <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-5">
                     <p className="text-sm uppercase tracking-[0.2em] text-slate-500">Recorded output</p>
                     <div className="mt-4 grid gap-3">
                       {Object.entries(completedSnapshot || {}).map(([key, value]) => (

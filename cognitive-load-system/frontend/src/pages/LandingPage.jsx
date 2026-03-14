@@ -33,9 +33,9 @@ const LandingPage = () => (
           "Reading and Stroop interference analysis",
           "Admin analytics and dataset export"
         ].map((item) => (
-            <div key={item} className="panel-soft p-5 text-slate-700">
-              {item}
-            </div>
+          <div key={item} className="panel-soft p-5 text-slate-700">
+            {item}
+          </div>
         ))}
       </div>
     </aside>
