@@ -1,0 +1,31 @@
+{
+  "name": "cognitive-load-backend",
+  "version": "1.0.0",
+  "description": "Express backend for cognitive load detection platform",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "bcryptjs": "^2.4.3",
+    "csv-parse": "^5.6.0",
+    "cors": "^2.8.5",
+    "csv-stringify": "^6.5.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  }
+}

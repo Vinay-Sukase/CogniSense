@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+      - ml-service
+    environment:
+      PORT: 5000
+      MONGODB_URI: mongodb://mongo:27017/cognitive_load_system
+      JWT_SECRET: change-this-secret
+      JWT_EXPIRES_IN: 7d
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: Admin@12345
+      ML_SERVICE_URL: http://ml-service:8000
+      CLIENT_URL: http://localhost:5173
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      VITE_API_URL: http://localhost:5000/api
+    ports:
+      - "5173:5173"
+
+  ml-service:
+    build: ./ml-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
+volumes:
+  mongo_data:
+

@@ -1,0 +1,5 @@
+session_id,reaction_time_mean,reaction_time_variance,missed_clicks,nback_accuracy,nback_false_positives,nback_response_time,memory_span,recall_accuracy,reverse_recall_accuracy,reading_accuracy,reading_time,hesitation_count,stroop_response_time,stroop_interference_score,questionnaire_attention,questionnaire_mental_fatigue,questionnaire_cognitive_overload,questionnaire_productivity_perception,questionnaire_motivation,questionnaire_anxiety_tendency,questionnaire_total,cognitive_load_score,target_label
+demo-001,380,16,1,82,1,540,7,84,72,88,82,2,640,26,4,5,4,4,5,3,25,28,Moderate Load
+demo-002,540,32,2,68,3,640,6,74,61,78,98,4,720,46,6,7,7,5,4,5,34,57,High Load
+demo-003,690,55,4,48,5,710,5,61,54,65,110,6,790,63,8,8,9,4,3,7,45,78,Severe Cognitive Fatigue
+
