@@ -197,8 +197,29 @@ const READING_BANK = [
 
 const pickRandomPassage = () => READING_BANK[Math.floor(Math.random() * READING_BANK.length)];
 
+const shuffleOptions = (items) => {
+  const shuffled = [...items];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled;
+};
+
 const MovingTextReadingTest = ({ onComplete }) => {
-  const content = useMemo(() => pickRandomPassage(), []);
+  const content = useMemo(() => {
+    const selectedPassage = pickRandomPassage();
+
+    return {
+      ...selectedPassage,
+      questions: selectedPassage.questions.map((question) => ({
+        ...question,
+        options: shuffleOptions(question.options)
+      }))
+    };
+  }, []);
   const words = useMemo(() => content.passage.split(" "), [content]);
   const [index, setIndex] = useState(0);
   const [readingComplete, setReadingComplete] = useState(false);
