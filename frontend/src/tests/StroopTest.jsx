@@ -66,7 +66,7 @@ const StroopTest = ({ onComplete }) => {
       </div>
       {current ? (
         <>
-          <div className="rounded-[26px] border border-white/70 bg-white/80 p-8 text-center">
+          <div className="test-focus-surface p-8 text-center">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Current prompt</p>
             <div className="mt-5 text-5xl font-bold" style={{ color: current.inkHex }}>
               {current.word}
@@ -96,3 +96,4 @@ const StroopTest = ({ onComplete }) => {
 };
 
 export default StroopTest;
+

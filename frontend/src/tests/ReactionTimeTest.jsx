@@ -68,7 +68,7 @@ const ReactionTimeTest = ({ onComplete }) => {
       </div>
       <div
         className={`mt-6 flex h-48 items-center justify-center rounded-3xl border border-dashed transition ${
-          stimulusVisible ? "border-sky-400 bg-sky-100" : "border-slate-200 bg-white/80"
+          stimulusVisible ? "border-sky-400 bg-sky-100 shadow-inner" : "border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-inner"
         }`}
         onClick={handleClick}
         role="button"
@@ -100,3 +100,4 @@ const ReactionTimeTest = ({ onComplete }) => {
 };
 
 export default ReactionTimeTest;
+

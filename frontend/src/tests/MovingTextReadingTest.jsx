@@ -269,9 +269,9 @@ const MovingTextReadingTest = ({ onComplete }) => {
 
       {!readingComplete ? (
         <div className="space-y-5">
-          <div className="rounded-[26px] border border-white/70 bg-white/80 p-6">
+          <div className="test-focus-surface p-6">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Current word</p>
-            <div className="mt-4 flex min-h-40 items-center justify-center rounded-3xl bg-white/85 p-8 text-center text-3xl font-semibold text-slate-900">
+            <div className="test-focus-display mt-4 flex min-h-40 items-center justify-center p-8 text-center text-3xl font-semibold text-slate-900">
               {words[index]}
             </div>
           </div>
@@ -281,12 +281,12 @@ const MovingTextReadingTest = ({ onComplete }) => {
         </div>
       ) : (
         <div className="space-y-5">
-          <div className="rounded-[24px] border border-white/70 bg-white/80 p-5">
+          <div className="test-copy-panel p-5">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Passage shown</p>
             <p className="mt-3 text-slate-700">{content.passage}</p>
           </div>
           {content.questions.map((question, questionIndex) => (
-            <div key={question.prompt} className="rounded-2xl border border-white/60 bg-white/75 p-4">
+            <div key={question.prompt} className="test-copy-panel p-4">
               <p className="mb-3 text-slate-800">{question.prompt}</p>
               <div className="flex flex-wrap gap-3">
                 {question.options.map((option) => (
@@ -320,3 +320,4 @@ const MovingTextReadingTest = ({ onComplete }) => {
 };
 
 export default MovingTextReadingTest;
+

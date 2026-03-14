@@ -56,8 +56,10 @@ const MemoryRecallTest = ({ onComplete }) => {
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-slate-900">Memory Recall Test</h3>
       {phase === "show" ? (
-        <div className="mt-8 overflow-x-auto rounded-3xl bg-white/85 p-8 text-center text-4xl font-bold tracking-[0.45em] whitespace-nowrap text-slate-900 md:text-5xl">
-          {sequence}
+        <div className="test-focus-surface mt-8 overflow-x-auto p-6">
+          <div className="test-focus-display p-8 text-center text-4xl font-bold tracking-[0.45em] whitespace-nowrap text-slate-900 md:text-5xl">
+            {sequence}
+          </div>
         </div>
       ) : (
         <div className="mt-6 space-y-4">

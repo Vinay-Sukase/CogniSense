@@ -98,7 +98,7 @@ const NBackTest = ({ n = 2, onComplete }) => {
         </p>
       </div>
 
-      <div className="rounded-[26px] border border-white/70 bg-white/80 p-6">
+      <div className="test-focus-surface p-6">
         <div className="flex flex-wrap gap-3">
           {sequenceWindow.map((letter, windowIndex) => {
             const absoluteIndex = index - sequenceWindow.length + windowIndex + 1;
@@ -122,11 +122,11 @@ const NBackTest = ({ n = 2, onComplete }) => {
           })}
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl bg-slate-50 p-4">
+          <div className="test-copy-panel p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Current letter</p>
             <p className="mt-2 text-4xl font-semibold text-slate-900">{currentLetter}</p>
           </div>
-          <div className="rounded-2xl bg-slate-50 p-4">
+          <div className="test-copy-panel p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
               Letter {n} steps back
             </p>
@@ -164,3 +164,4 @@ const NBackTest = ({ n = 2, onComplete }) => {
 };
 
 export default NBackTest;
+
